@@ -1,0 +1,22 @@
+# Terraform working directories and generated state
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# Terraform plans and variable files (often contain secrets)
+*.tfplan
+*.tfvars
+*.tfvars.json
+
+# Terraform CLI configuration
+.terraformrc
+terraform.rc
+
+# Local environment and OS/editor files
+.env
+.env.*
+.DS_Store
+.idea/
+.vscode/
