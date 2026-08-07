@@ -223,7 +223,7 @@ The overlapping search window helps account for CloudTrail ingestion latency.
 
 Screenshot of historical root activity detected in Splunk:
 
-`screenshots/root-account-activity.png`
+`screenshots/root-account-actvity.png`
 
 The screenshot demonstrates that the pipeline successfully identifies CloudTrail events associated with the AWS root identity.
 
