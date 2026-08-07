@@ -103,8 +103,13 @@ resource "aws_cloudtrail" "security_trail" {
 
   enable_logging = true
 
+   # Send CloudTrail events to CloudWatch
+  cloud_watch_logs_group_arn = "${aws_cloudwatch_log_group.cloudtrail_logs.arn}:*"
+  cloud_watch_logs_role_arn  = aws_iam_role.cloudtrail_cloudwatch.arn
+
   depends_on = [
-    aws_s3_bucket_policy.cloudtrail_logs
+    aws_s3_bucket_policy.cloudtrail_logs,
+    aws_iam_role_policy.cloudtrail_cloudwatch
   ]
 
   tags = {
